@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import "./App.css";
+import WaffleHeart from '/WaffleHeart.svg'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const amazingTime = 1766097900000; // target timestamp
+
+  const [timeTill, setTimeTill] = useState(amazingTime - Date.now());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeTill(amazingTime - Date.now());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Convert ms → d/h/m/s
+  const seconds = Math.floor(timeTill / 1000) % 60;
+  const minutes = Math.floor(timeTill / (1000 * 60)) % 60;
+  const hours = Math.floor(timeTill / (1000 * 60 * 60)) % 24;
+  const days = Math.floor(timeTill / (1000 * 60 * 60 * 24));
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className="header">
+      <img 
+      src={WaffleHeart} 
+      alt="waffle heart"
+      className="wh"
+      />
+      <h1>Time till Frederik and Ida are together again!</h1>
+      <img 
+      src={WaffleHeart} 
+      alt="waffle heart"
+      className="wh"
+      />
+    </div>
+      <h2>
+        {days} days {hours} hours {minutes} minutes {seconds} seconds
+      </h2>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
