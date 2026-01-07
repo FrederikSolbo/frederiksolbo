@@ -28,8 +28,12 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .wh {
-    animation: logo-spin infinite 20s linear;
+  .left {
+    animation: logo-spin infinite 10s linear;
+  }
+
+  .right {
+    animation: logo-spin infinite 10s linear reverse;
   }
 }
 

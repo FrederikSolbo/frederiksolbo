@@ -27,13 +27,13 @@ function App() {
       <img 
       src={WaffleHeart} 
       alt="waffle heart"
-      className="wh"
+      className="wh left"
       />
       <h1>Time till Frederik and Ida are together again!</h1>
       <img 
       src={WaffleHeart} 
       alt="waffle heart"
-      className="wh"
+      className="wh right"
       />
     </div>
       <h2>
