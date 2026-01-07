@@ -29,11 +29,11 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .left {
-    animation: logo-spin infinite 10s linear;
+    animation: logo-spin infinite 10s linear reverse;
   }
 
   .right {
-    animation: logo-spin infinite 10s linear reverse;
+    animation: logo-spin infinite 10s linear;
   }
 }
 
