@@ -57,3 +57,7 @@
   width: 4rem;
   padding: 20px;
 }
+
+.time {
+  display: none;
+}

@@ -29,14 +29,14 @@ function App() {
       alt="waffle heart"
       className="wh left"
       />
-      <h1>Time till Frederik and Ida are together again!</h1>
+      <h1>Frederik and Ida Kathrine are together!</h1>
       <img 
       src={WaffleHeart} 
       alt="waffle heart"
       className="wh right"
       />
     </div>
-      <h2>
+      <h2 className="time">
         {days} days {hours} hours {minutes} minutes {seconds} seconds
       </h2>
     </>
