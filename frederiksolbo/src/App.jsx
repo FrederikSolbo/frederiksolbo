@@ -3,7 +3,7 @@ import "./App.css";
 import WaffleHeart from '/WaffleHeart.svg'
 
 function App() {
-  const amazingTime = 1768640400000; // target timestamp
+  const amazingTime = 1774915200000; // target timestamp
 
   const [timeTill, setTimeTill] = useState(amazingTime - Date.now());
 
