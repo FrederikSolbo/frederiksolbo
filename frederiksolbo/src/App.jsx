@@ -29,7 +29,8 @@ function App() {
       alt="waffle heart"
       className="wh left"
       />
-      <h1>Time till Frederik and Ida Kathrine are together again!</h1>
+      <h1 className="title not-together">Time till Frederik and Ida Kathrine are together again!</h1>
+      <h1 className="title together">Frederik and Ida Kathrine are together again!</h1>
       <img 
       src={WaffleHeart} 
       alt="waffle heart"

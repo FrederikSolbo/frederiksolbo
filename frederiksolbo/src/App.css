@@ -59,6 +59,14 @@
 }
 
 .time {
-  display: flex;
+  display: none;
   justify-content: center;
+}
+
+.not-together {
+  display: none;
+}
+
+.together {
+  display: flex;
 }
